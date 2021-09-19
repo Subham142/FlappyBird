@@ -19,11 +19,19 @@ const config = {
 function preload() {
   // 'this' context - scene
   // contains functions and properties we can use
-  debugger
+  this.load.image('sky', 'assets/sky.png');
+  this.load.image('bird', 'assets/bird.png')
 }
 
+let bird = null;
 
 function create() {
+   // x - 400
+  // y - 300
+  // key of the image
+  this.add.image(0,0, 'sky').setOrigin(0);
+  // middle of the height , 1/10 width
+  bird = this.add.sprite(config.width * 0.1, config.height / 2, 'bird').setOrigin(0)
   debugger
 }
 
